@@ -10,6 +10,6 @@ public class GenderValidator implements ConstraintValidator<ValidateGender, Stri
     @Override
     public boolean isValid(String gender, ConstraintValidatorContext constraintValidatorContext) {
         List<String> genders = Arrays.asList("MALE", "FEMALE");
-        return genders.contains(gender);
+        return genders.contains(gender.toUpperCase());
     }
 }
